@@ -7,12 +7,12 @@ import './App.css';
 
 function App() {
   return (
-    <Fragment className="App">
+    <>
       <Nav/>
       <Header/>
       <Main/>
       <Footer/>
-    </Fragment>
+    </>
   );
 }
 

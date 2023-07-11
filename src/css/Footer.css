@@ -1,0 +1,51 @@
+footer{
+    grid-column: 1/13;
+    grid-row: 6/7;
+    display: flex;
+    justify-content: center;
+    background-color: #333333;
+}
+
+footer img{
+    margin-top: 25px;
+    border: 1px solid #ffffff;
+}
+
+.DoorMat, .Contact, .SocialMedia{
+    width: 220px;
+    height: 294px;
+    margin: 0 20px;
+}
+
+.SocialMedia{
+    margin-left: 40px;
+}
+
+.DoorMat h1, .Contact h1, .SocialMedia h1{
+    font-family: 'Karla';
+    font-size: 35px;
+    color: #EDEFEE;
+    text-shadow: 2px 2px 4px #333333;
+}
+
+.Contact ul{
+    margin-top: 70px;
+}
+
+.DoorMat ul, .Contact ul, .SocialMedia ul{
+    font-family: 'Karla';
+    list-style: none;
+}
+
+.DoorMat li, .Contact li, .SocialMedia li{
+    margin-bottom: 5px;
+}
+
+.DoorMat a, .Contact a, .SocialMedia a{
+    color: #EDEFEE;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: -35px;
+    letter-spacing: 5px;
+}

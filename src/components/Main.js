@@ -1,8 +1,16 @@
 import React from "react";
+import Specials from "./Specials"
+import Testimonials from "./Testimonials"
+import About from "./About";
+import "../css/Main.css"
 
 function Main(){
     return(
-        <main>Something to be the main</main>
+        <>
+        <Specials/>
+        <Testimonials />
+        <About />
+        </>
     );
 };
 

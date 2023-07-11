@@ -1,8 +1,10 @@
 import React from "react";
+import "../css/Header.css"
+import Hero from "./Hero"
 
 function Header(){
     return(
-        <header>Something in the header</header>
+        <Hero/>
     );
 };
 

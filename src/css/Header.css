@@ -1,0 +1,68 @@
+.callToAction-container{
+    grid-column: 1/13;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    background-color: #495E57;
+}
+
+.callToAction{
+    grid-column: 4/7;
+}
+
+.callToAction h1{
+    font-family: 'Markazi Text';
+    font-size: 64px;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px #333333;
+    color: #F4CE14;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.callToAction h2{
+    font-family: 'Markazi Text';
+    font-size: 40px;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px #333333;
+    color: #ffffff;
+    margin-top: -25px;
+    margin-bottom: 0;
+}
+
+.callToAction p{
+    width: 250px;
+    font-family: 'Karla';
+    font-size: 18px;
+    text-shadow: 2px 2px 4px #333333;
+    color: #ffffff;
+}
+
+
+.img-div{
+    grid-column: 8/9;
+}
+
+.img{
+    width: 350px;
+    height: 370px;
+    margin-top: 30px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 10px #333333;
+}
+
+.callToAction button{
+    width: 230px;
+    height: 70px;
+    background-color: #F4CE14;
+    border: none;
+    box-shadow: 2px 2px 10px #333333;
+    cursor: pointer;
+    border-radius: 16px;
+    font-family: 'Karla';
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #333333;
+}
