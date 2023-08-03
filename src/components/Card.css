@@ -1,0 +1,50 @@
+.card {
+  width: 320px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 3px 3px 10px #000000;
+}
+
+.card-img {
+  width: 100%;
+  height: 240px;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-content {
+  width: 100%;
+  height: 60%;
+  background: #EDEFEE;
+  border-radius: 0 0 15px 15px;
+  padding: 15px 15px;
+}
+
+.card-content h2 {
+  font-family: 'Karla', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: none;
+  display: inline;
+  color: #333333;
+}
+
+.card-price {
+  float: right;
+  margin-right: 24px;
+  font-family: 'Karla' sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #EE9972;
+
+}
+
+.card-info {
+  font-family: 'Karla' sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 30px;
+}

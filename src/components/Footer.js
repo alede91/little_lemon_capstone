@@ -1,48 +1,43 @@
-import React from "react";
-import logo2 from "../assets/Logo2.png"
-import "../css/Footer.css"
+import FooterImg from "../assets/Logo2.png";
+import { Link } from "react-router-dom";
 
-function Footer() {
-    return (
-        <footer>
-            <div>
+const Footer = () => {
+  return (
+    <>
+      <footer className="pd lemon-primary-dark white row">
 
-                <img src={logo2} alt="Doormat Navigation"></img>
+          <figure>
+            <img className="footer-img" src={FooterImg} alt="Lettle Lemon Logo"></img>
+          </figure>
 
-                
-            </div>
+          <div className="sitemap-container">
+            <h2>SITEMAP</h2>
+            <Link className="sitemap-container-link" to="/">
+              Home
+            </Link>
+            <Link className="sitemap-container-link" to="/menu">
+              Menu
+            </Link>
+            <Link className="sitemap-container-link" to="/reserve">
+              Reserve
+            </Link>
+          </div>
 
-            <div className="DoorMat">
-            <h1>Doormat Navigation</h1>
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">menu</a></li>
-                    <li><a href="#">reservations</a></li>
-                    <li><a href="#">order online</a></li>
-                    <li><a href="#">login</a></li>
-                </ul>
-            </div>
+          <div className="contactus-container">
+            <h2>CONTACT US</h2>
+            <address>
+              Somewere in the wolrd!
+            </address>
 
-            <div className="Contact">
-                <h1>Contact</h1>
-                <ul>
-                <li><a href="#">adress</a></li>
-                <li><a href="#">phone number</a></li>
-                <li><a href="#">email</a></li>
-                </ul>
-            </div>
+          </div>
+        
+        <div>
+          <p>&copy; Developed by Alexandre Costa</p>
+        </div>
 
-            <div className="SocialMedia">
-                <h1>social media links</h1>
-                <ul>
-                <li><a href="#">instagram</a></li>
-                <li><a href="#">facebook</a></li>
-                <li><a href="#">whatsapp</a></li>
-                </ul>
-            </div>
-        </footer>
-    );
+      </footer>
+    </>
+  );
 };
 
 export default Footer;

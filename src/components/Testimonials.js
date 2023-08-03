@@ -1,69 +1,34 @@
-import React from "react";
-import personImage from "../assets/restaurantChef B.jpg"
+import "./Testimonials.css";
+import TestimonialsCard from "./TestimonialsCard";
+import { useState, useEffect } from "react";
 
-function Testimonials() {
-    return (
-        <div className="testimonials-container">
+const Testimonials = () => {
+  const [users, setUsers] = useState([]);
 
-            <h1>Testimonials</h1>
-            <div className="testimonials-card-container">
+  const fetchData = async () => {
+    try {
+      const response = await fetch("https://randomuser.me/api/?results=4");
+      const data = await response.json();
+      setUsers(data.results);
+    } catch (err) {
+      console.log("ERROR: ", err);
+    }
+  };
 
-                <div className="testimonials-card-1">
-                    <div className="rate">
-                        <p>★ ★ ★ ★ ★</p>
-                    </div>
-                    <div className="testimonials-photo-text-container">
-                        <img src={personImage} alt="Testimonials person image" />
-                        <label>Jhon Pereira Alcantara</label>
-                    </div>
-                    <div className="testimonials-review">
-                        <p>Some text to be the person review of Little Lemon Restaurant.</p>
-                    </div>
-                </div>
-                <div className="testimonials-card-2">
-                    <div className="rate">
-                        <p>★ ★ ★ ★ ★</p>
-                    </div>
-                    <div className="testimonials-photo-text-container">
-                        <img src={personImage} alt="Testimonials person image" />
-                        <label>Jhon Pereira Alcantara</label>
-                    </div>
-                    <div className="testimonials-review">
-                        <p>Some text to be the person review of Little Lemon Restaurant.</p>
-                    </div>
-                </div>
-                <div className="testimonials-card-3">
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-                    <div className="rate">
-                        <p>★ ★ ★ ★ ★</p>
-                    </div>
-
-                    <div className="testimonials-photo-text-container">
-                        <img src={personImage} alt="Testimonials person image" />
-                        <label>Jhon Pereira Alcantara</label>
-                    </div>
-
-                    <div className="testimonials-review">
-                        <p>Some text to be the person review of Little Lemon Restaurant.</p>
-                    </div>
-                </div>
-                <div className="testimonials-card-4">
-                    <div className="rate">
-                        <p>★ ★ ★ ★ ★</p>
-                    </div>
-                    <div className="testimonials-photo-text-container">
-                        <img src={personImage} alt="Testimonials person image" />
-                        <label>Jhon Pereira Alcantara</label>
-                    </div>
-                    <div className="testimonials-review">
-                        <p>Some text to be the person review of Little Lemon Restaurant.</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    );
+  return (
+    <section className="testimonials">
+      <h2>Testimonials</h2>
+      <div className="testimonials-card">
+        {users.map((person, index) => {
+          return <TestimonialsCard key={index} data={person} />;
+        })}
+      </div>
+    </section>
+  );
 };
 
 export default Testimonials;
